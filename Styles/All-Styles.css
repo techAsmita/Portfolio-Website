@@ -874,91 +874,56 @@
       /* Skills Section - New Styles for Categorized Layout */
       .skills-intro-text {
         text-align: center;
-        font-size: 1.1rem;
-        color: var(--secondary-text-dark);
-        margin-bottom: 50px;
-        line-height: 1.6;
+        font-size: var(--text-lg);
+        color: var(--color-text-secondary);
+        margin-bottom: var(--space-10);
+        line-height: var(--leading-normal);
       }
 
-      body.light-theme .skills-intro-text {
-        color: var(--secondary-text-light);
-      }
-
-      .skills-categories-grid {
+      .skills-showcase {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 30px;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: var(--space-6);
       }
 
-      .skill-category-card {
-        background-color: var(--card-bg-dark);
-        border-radius: var(--border-radius);
-        padding: 30px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        transition: transform 0.2s ease, box-shadow 0.3s ease,
-          background-color 0.3s ease;
+      .skill-category-title {
+        font-family: var(--font-sans);
+        font-weight: var(--weight-semibold);
+        font-size: var(--text-lg);
+        color: var(--color-text);
+        margin: 0 0 var(--space-5) 0;
       }
 
-      body.light-theme .skill-category-card {
-        background-color: var(--card-bg-light);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      }
-
-      .skill-category-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 20px rgba(162, 107, 250, 0.4);
-      }
-
-      body.light-theme .skill-category-card:hover {
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      }
-
-      .skill-category-card h3 {
-        font-size: 1.8rem;
-        margin-bottom: 25px;
-        text-align: center;
-        color: var(--highlight-color-dark);
-      }
-
-      body.light-theme .skill-category-card h3 {
-        color: var(--highlight-color-light);
-      }
-
-      .skill-tags-container {
+      .skill-badges {
         display: flex;
         flex-wrap: wrap;
-        gap: 15px;
-        justify-content: center; /* Center tags within the card */
+        gap: var(--space-3);
       }
 
-      .skill-tag {
-        display: flex;
+      .skill-badge {
+        display: inline-flex;
         align-items: center;
-        background-color: rgba(162, 107, 250, 0.15); /* Lighter background for tags */
-        color: var(--text-color-dark);
-        padding: 10px 18px;
-        border-radius: 25px;
-        font-size: 0.95rem;
-        font-weight: 500;
-        border: 1px solid rgba(162, 107, 250, 0.4);
-        transition: background-color 0.3s ease, color 0.3s ease,
-          border-color 0.3s ease;
+        gap: var(--space-2);
+        padding: var(--space-2) var(--space-4);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-full);
+        background: var(--color-surface-raised);
+        color: var(--color-text-secondary);
+        font-family: var(--font-mono);
+        font-size: var(--text-xs);
+        font-weight: var(--weight-medium);
+        transition: color var(--transition-base) var(--ease-standard),
+          border-color var(--transition-base) var(--ease-standard);
       }
 
-      body.light-theme .skill-tag {
-        background-color: rgba(123, 63, 224, 0.1);
-        color: var(--text-color-light);
-        border-color: rgba(123, 63, 224, 0.3);
+      .skill-badge:hover {
+        color: var(--color-text);
+        border-color: var(--color-accent);
       }
 
-      .skill-tag i {
-        margin-right: 8px;
-        font-size: 1.1rem;
-        color: var(--highlight-color-dark);
-      }
-
-      body.light-theme .skill-tag i {
-        color: var(--highlight-color-light);
+      .skill-badge i {
+        color: var(--color-accent);
+        font-size: var(--text-sm);
       }
 
       /* ============================================================
@@ -992,10 +957,91 @@
       }
 
       .project-card-featured {
+        display: flex;
+        flex-direction: column;
         grid-column: span 2;
         grid-row: span 2;
         padding: var(--space-8);
         background: linear-gradient(160deg, var(--color-surface) 60%, var(--color-accent-muted));
+      }
+
+      /* ---- Featured project preview (browser mockup, CSS-only) ---- */
+      .project-preview {
+        flex: 1;
+        display: flex;
+        min-height: 140px;
+        margin-bottom: var(--space-6);
+      }
+
+      .browser-mockup {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid var(--color-border-strong);
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        background: var(--color-surface-raised);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .browser-mockup-bar {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: var(--space-2) var(--space-4);
+        background: var(--color-bg);
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      .browser-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--color-border-strong);
+      }
+
+      .browser-url {
+        margin-left: var(--space-3);
+        font-family: var(--font-mono);
+        font-size: var(--text-xs);
+        color: var(--color-text-tertiary);
+      }
+
+      .browser-mockup-body {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-3);
+        padding: var(--space-5);
+      }
+
+      .mockup-block {
+        height: 12px;
+        border-radius: var(--radius-sm);
+        background: linear-gradient(90deg, var(--color-border), var(--color-border-strong));
+        opacity: 0.6;
+      }
+
+      .mockup-block-wide {
+        width: 92%;
+        height: 16px;
+      }
+
+      .mockup-block-medium {
+        width: 68%;
+      }
+
+      .mockup-block-short {
+        width: 40%;
+      }
+
+      .mockup-chart {
+        flex: 1;
+        min-height: 56px;
+        margin-top: var(--space-2);
+        border-radius: var(--radius-sm);
+        background: linear-gradient(135deg, var(--color-accent-muted), transparent);
+        border: 1px dashed var(--color-border-strong);
       }
 
       .project-card-glyph {
@@ -1468,7 +1514,7 @@
           margin-bottom: 40px;
         }
 
-        .skills-categories-grid {
+        .skills-showcase {
           grid-template-columns: 1fr; /* Stack categories on small screens */
         }
 
@@ -1525,15 +1571,15 @@
           width: 100%;
         }
 
-        .skill-category-card {
+        .skill-category {
           padding: 20px;
         }
-        .skill-category-card h3 {
-          font-size: 1.5rem;
+        .skill-category-title {
+          font-size: 1.2rem;
         }
-        .skill-tag {
-          padding: 8px 15px;
-          font-size: 0.9rem;
+        .skill-badge {
+          padding: 6px 12px;
+          font-size: 0.75rem;
         }
         .project-card {
           padding: 20px;

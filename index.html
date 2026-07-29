@@ -27,9 +27,9 @@
 
         <ul class="nav-menu" id="navMenu">
           <li><a href="#about" class="nav-link active-link" data-nav-link>About</a></li>
-          <li><a href="#projects" class="nav-link" data-nav-link>Projects</a></li>
+          <li><a href="#projects" class="nav-link" data-nav-link>Featured Work</a></li>
           <li><a href="#skills" class="nav-link" data-nav-link>Skills</a></li>
-          <li><a href="#education" class="nav-link" data-nav-link>Experience</a></li>
+          <li><a href="#education" class="nav-link" data-nav-link>Education</a></li>
           <li><a href="#contact" class="nav-link" data-nav-link>Contact</a></li>
         </ul>
 
@@ -44,7 +44,7 @@
             <i class="fas fa-sun" aria-hidden="true"></i>
           </button>
           <a
-            href="https://docs.google.com/document/d/1wMPlIwiGMudeCo35K3_Z9RziOapGN6wR-BIvf9yC3qU/edit?usp=sharing"
+            href="https://drive.google.com/drive/folders/1HZxr5b2D5mUOB1gwu5MBgI8ogM2Snjga?usp=sharing"
             target="_blank"
             rel="noopener"
             class="btn btn-primary btn-sm"
@@ -93,7 +93,7 @@
           <div class="hero-cta-group">
             <a href="#projects" class="btn btn-primary hero-btn">View Projects</a>
             <a
-              href="https://docs.google.com/document/d/1wMPlIwiGMudeCo35K3_Z9RziOapGN6wR-BIvf9yC3qU/edit?usp=sharing"
+              href="https://drive.google.com/drive/folders/1HZxr5b2D5mUOB1gwu5MBgI8ogM2Snjga?usp=sharing"
               target="_blank"
               rel="noopener"
               class="btn btn-secondary hero-btn"
@@ -145,112 +145,67 @@
     <section id="skills">
       <h2 class="section-heading">SKILLS</h2>
       <p class="skills-intro-text">
-        A glimpse into what I've been building, refining, and growing every day.
+        A modern, evolving toolkit across languages, AI/ML, and full-stack engineering.
       </p>
 
-      <div class="skills-categories-grid">
-        <!-- Frontend Skills -->
-        <div class="skill-category-card">
-          <h3>Frontend</h3>
-          <div class="skill-tags-container">
-            <!-- Removed React.js -->
-            <span class="skill-tag"
-              ><i class="fab fa-html5"></i> HTML</span
-            >
-            <span class="skill-tag"
-              ><i class="fab fa-css3-alt"></i> CSS</span
-            >
-            <span class="skill-tag"
-              ><i class="fab fa-js"></i> JavaScript</span
-            >
-            <span class="skill-tag"
-              ><i class="fab fa-bootstrap"></i> Bootstrap</span
-            >
+      <div class="skills-showcase">
+        <div class="skill-category card">
+          <h3 class="skill-category-title">Languages</h3>
+          <div class="skill-badges">
+            <span class="skill-badge"><i class="fab fa-python" aria-hidden="true"></i>Python</span>
+            <span class="skill-badge"><i class="fab fa-java" aria-hidden="true"></i>Java</span>
+            <span class="skill-badge"><i class="fab fa-js" aria-hidden="true"></i>JavaScript</span>
+            <span class="skill-badge"><i class="fas fa-database" aria-hidden="true"></i>SQL</span>
           </div>
         </div>
 
-        <!-- Backend Skills -->
-        <div class="skill-category-card">
-          <h3>Backend</h3>
-          <div class="skill-tags-container">
-            <span class="skill-tag"
-              ><i class="fab fa-python"></i> Python</span
-            >
-            <span class="skill-tag"><i class="fas fa-database"></i> SQL</span>
+        <div class="skill-category card">
+          <h3 class="skill-category-title">AI / ML</h3>
+          <div class="skill-badges">
+            <span class="skill-badge"><i class="fas fa-network-wired" aria-hidden="true"></i>TensorFlow</span>
+            <span class="skill-badge"><i class="fas fa-robot" aria-hidden="true"></i>Scikit-learn</span>
+            <span class="skill-badge"><i class="fas fa-eye" aria-hidden="true"></i>OpenCV</span>
+            <span class="skill-badge"><i class="fas fa-chart-line" aria-hidden="true"></i>Pandas</span>
+            <span class="skill-badge"><i class="fas fa-square-root-variable" aria-hidden="true"></i>NumPy</span>
+            <span class="skill-badge"><i class="fas fa-brain" aria-hidden="true"></i>LLMs</span>
           </div>
         </div>
 
-        <!-- Databases Skills -->
-        <div class="skill-category-card">
-          <h3>Databases</h3>
-          <div class="skill-tags-container">
-            <span class="skill-tag"><i class="fas fa-database"></i> Oracle</span>
-            <span class="skill-tag"><i class="fas fa-database"></i> MySQL</span>
-            <span class="skill-tag"><i class="fas fa-database"></i> PostgreSQL</span>
+        <div class="skill-category card">
+          <h3 class="skill-category-title">Frontend</h3>
+          <div class="skill-badges">
+            <span class="skill-badge"><i class="fab fa-html5" aria-hidden="true"></i>HTML</span>
+            <span class="skill-badge"><i class="fab fa-css3-alt" aria-hidden="true"></i>CSS</span>
+            <span class="skill-badge"><i class="fab fa-js" aria-hidden="true"></i>JavaScript</span>
+            <span class="skill-badge"><i class="fab fa-bootstrap" aria-hidden="true"></i>Bootstrap</span>
           </div>
         </div>
 
-        <!-- AI/ML Skills -->
-        <div class="skill-category-card">
-          <h3>AI/ML</h3>
-          <div class="skill-tags-container">
-            <span class="skill-tag"
-              ><i class="fas fa-brain"></i> NumPy</span
-            >
-            <span class="skill-tag"
-              ><i class="fas fa-chart-line"></i> Pandas</span
-            >
-            <span class="skill-tag"><i class="fas fa-robot"></i> Scikit-learn</span>
+        <div class="skill-category card">
+          <h3 class="skill-category-title">Backend</h3>
+          <div class="skill-badges">
+            <span class="skill-badge"><i class="fab fa-node-js" aria-hidden="true"></i>Node.js</span>
+            <span class="skill-badge"><i class="fas fa-server" aria-hidden="true"></i>Express</span>
+            <span class="skill-badge"><i class="fas fa-bolt" aria-hidden="true"></i>FastAPI</span>
           </div>
         </div>
 
-        <!-- Programming Languages -->
-        <div class="skill-category-card">
-          <h3>Programming Languages</h3>
-          <div class="skill-tags-container">
-            <span class="skill-tag"
-              ><i class="fas fa-terminal"></i> C</span
-            >
-            <span class="skill-tag"
-              ><i class="fas fa-terminal"></i> C++</span
-            >
-            <span class="skill-tag"
-              ><i class="fab fa-java"></i> Java (Basics)</span
-            >
-            <span class="skill-tag"
-              ><i class="fab fa-python"></i> Python</span
-            >
-            <span class="skill-tag"
-              ><i class="fas fa-ruler"></i> R Program</span
-            >
-            <span class="skill-tag"
-              ><i class="fas fa-object-group"></i> OOPs (Python & C++)</span
-            >
+        <div class="skill-category card">
+          <h3 class="skill-category-title">Databases</h3>
+          <div class="skill-badges">
+            <span class="skill-badge"><i class="fas fa-database" aria-hidden="true"></i>MySQL</span>
+            <span class="skill-badge"><i class="fas fa-database" aria-hidden="true"></i>PostgreSQL</span>
           </div>
         </div>
 
-        <!-- Other Tools & Skills -->
-        <div class="skill-category-card">
-          <h3>Other Tools & Skills</h3>
-          <div class="skill-tags-container">
-            <span class="skill-tag"
-              ><i class="fab fa-google"></i> Google Colab</span
-            >
-            <span class="skill-tag"
-              ><i class="fas fa-code"></i> VS Code</span
-            >
-            <span class="skill-tag"
-              ><i class="fas fa-cloud-arrow-down"></i> Postman API</span
-            >
-            <span class="skill-tag"
-              ><i class="fas fa-paint-brush"></i> Graphic Designer</span
-            >
-            <span class="skill-tag"
-              ><i class="fas fa-pencil-alt"></i> Content Writer</span
-            >
-            <span class="skill-tag"
-              ><i class="fas fa-video"></i> Video Editor</span
-            >
+        <div class="skill-category card">
+          <h3 class="skill-category-title">Tools</h3>
+          <div class="skill-badges">
+            <span class="skill-badge"><i class="fas fa-code-branch" aria-hidden="true"></i>Git</span>
+            <span class="skill-badge"><i class="fab fa-github" aria-hidden="true"></i>GitHub</span>
+            <span class="skill-badge"><i class="fas fa-code" aria-hidden="true"></i>VS Code</span>
+            <span class="skill-badge"><i class="fas fa-chart-simple" aria-hidden="true"></i>Power BI</span>
+            <span class="skill-badge"><i class="fas fa-file-excel" aria-hidden="true"></i>Excel</span>
           </div>
         </div>
       </div>
@@ -279,6 +234,24 @@
             <span class="tech-tag">LLMs</span>
             <span class="tech-tag">React</span>
           </div>
+
+          <div class="project-preview" aria-hidden="true">
+            <div class="browser-mockup">
+              <div class="browser-mockup-bar">
+                <span class="browser-dot"></span>
+                <span class="browser-dot"></span>
+                <span class="browser-dot"></span>
+                <span class="browser-url">pactra.ai/dashboard</span>
+              </div>
+              <div class="browser-mockup-body">
+                <div class="mockup-block mockup-block-wide"></div>
+                <div class="mockup-block mockup-block-medium"></div>
+                <div class="mockup-block mockup-block-short"></div>
+                <div class="mockup-chart"></div>
+              </div>
+            </div>
+          </div>
+
           <div class="project-links">
             <a
               href="https://github.com/techAsmita/Pactra-AI-Project"
@@ -407,19 +380,19 @@
         </div>
 
         <div class="education-gpa">
-          <span class="education-gpa-value">8.36</span>
+          <span class="education-gpa-value">8.35</span>
           <span class="education-gpa-label label-mono">CGPA</span>
         </div>
 
         <div class="education-coursework">
           <p class="education-coursework-label label-mono">Relevant Coursework</p>
           <div class="education-coursework-tags">
+            <span class="course-tag">Machine Learning</span>
+            <span class="course-tag">Artificial Intelligence</span>
             <span class="course-tag">Data Structures</span>
             <span class="course-tag">Operating Systems</span>
             <span class="course-tag">DBMS</span>
             <span class="course-tag">Computer Networks</span>
-            <span class="course-tag">Machine Learning</span>
-            <span class="course-tag">Artificial Intelligence</span>
           </div>
         </div>
       </div>
@@ -455,7 +428,7 @@
         </div>
 
         <a
-          href="https://docs.google.com/document/d/1wMPlIwiGMudeCo35K3_Z9RziOapGN6wR-BIvf9yC3qU/edit?usp=sharing"
+          href="https://drive.google.com/drive/folders/1HZxr5b2D5mUOB1gwu5MBgI8ogM2Snjga?usp=sharing"
           target="_blank"
           rel="noopener"
           class="btn btn-primary cta-resume-btn"
