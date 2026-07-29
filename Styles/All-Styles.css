@@ -1071,204 +1071,257 @@
         margin-right: 8px;
       }
 
-      /* Education Section */
-      .education-item {
-        background-color: var(--card-bg-dark);
-        padding: 25px;
-        border-radius: var(--border-radius);
-        margin-bottom: 25px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        transition: background-color 0.3s ease, box-shadow 0.3s ease;
-        display: flex; /* Use flexbox for image and text side-by-side */
-        align-items: center; /* Vertically align items */
-        gap: 20px; /* Space between image and text */
+      /* ============================================================
+         EDUCATION — 2026 refresh (single premium card)
+         ============================================================ */
+      .education-card {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: start;
+        gap: var(--space-8);
       }
 
-      body.light-theme .education-item {
-        background-color: var(--card-bg-light);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      .education-card-header {
+        grid-column: 1;
       }
 
-      .education-logo {
-        width: 60px; /* Adjust size as needed */
-        height: 60px; /* Adjust size as needed */
-        object-fit: contain; /* Ensures logo fits without cropping */
-        border-radius: 5px; /* Slightly rounded corners for logos */
-        flex-shrink: 0; /* Prevent logo from shrinking */
+      .education-eyebrow {
+        margin: 0 0 var(--space-3) 0;
       }
 
-      .education-content {
-        flex-grow: 1; /* Allows content to take available space */
+      .education-institution {
+        font-family: var(--font-sans);
+        font-weight: var(--weight-bold);
+        font-size: var(--text-2xl);
+        color: var(--color-text);
+        margin: 0 0 var(--space-2) 0;
       }
 
-      .education-item h3 {
-        font-size: 1.6rem;
-        color: var(--highlight-color-dark);
-        margin-bottom: 5px;
+      .education-degree {
+        font-size: var(--text-base);
+        color: var(--color-text-secondary);
+        margin: 0;
       }
 
-      body.light-theme .education-item h3 {
-        color: var(--highlight-color-light);
-      }
-
-      .education-item h4 {
-        font-size: 1.2rem;
-        color: var(--text-color-dark);
-        margin-bottom: 5px;
-      }
-
-      body.light-theme .education-item h4 {
-        color: var(--text-color-light);
-      }
-
-      .education-item p {
-        font-size: 0.95rem;
-        color: var(--secondary-text-dark);
-      }
-
-      body.light-theme .education-item p {
-        color: var(--secondary-text-light);
-      }
-
-      /* Contact Section */
-      .contact-form-container {
-        background-color: var(--card-bg-dark);
-        padding: 40px;
-        border-radius: var(--border-radius);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        max-width: 600px;
-        margin: 0 auto;
-        transition: background-color 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      body.light-theme .contact-form-container {
-        background-color: var(--card-bg-light);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      }
-
-      .contact-form label {
-        display: block;
-        margin-bottom: 8px;
-        font-weight: 500;
-        color: var(--text-color-dark);
-      }
-
-      body.light-theme .contact-form label {
-        color: var(--text-color-light);
-      }
-
-      .contact-form input[type="text"],
-      .contact-form input[type="email"],
-      .contact-form textarea {
-        width: 100%;
-        padding: 12px;
-        margin-bottom: 20px;
-        border: 1px solid #333;
-        border-radius: 5px;
-        background-color: #0f0f1c;
-        color: white;
-        font-family: "Poppins", sans-serif;
-        font-size: 1rem;
-        transition: border-color 0.3s ease, background-color 0.3s ease;
-      }
-
-      body.light-theme .contact-form input[type="text"],
-      body.light-theme .contact-form input[type="email"],
-      body.light-theme .contact-form textarea {
-        border-color: #ddd;
-        background-color: #f8f8f8;
-        color: #333;
-      }
-
-      .contact-form input[type="text"]:focus,
-      .contact-form input[type="email"]:focus,
-      .contact-form textarea:focus {
-        border-color: var(--highlight-color-dark);
-        outline: none;
-      }
-
-      body.light-theme .contact-form input[type="text"]:focus,
-      body.light-theme .contact-form input[type="email"]:focus,
-      body.light-theme .contact-form textarea:focus {
-        border-color: var(--highlight-color-light);
-      }
-
-      .contact-form textarea {
-        resize: vertical;
-        min-height: 120px;
-      }
-
-      .contact-form button {
-        display: block;
-        width: 100%;
-        padding: 14px;
-        font-size: 1.1rem;
-        background: linear-gradient(90deg, #a26bfa, #d24ce5);
-        color: white;
-        border: none;
-        border-radius: var(--border-radius);
-        font-weight: 600;
-        cursor: pointer;
-        transition: transform 0.2s ease, box-shadow 0.3s ease;
-      }
-
-      body.light-theme .contact-form button {
-        background: linear-gradient(90deg, #7b3fe0, #a238b0);
-      }
-
-      .contact-form button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(162, 107, 250, 0.6);
-      }
-
-      body.light-theme .contact-form button:hover {
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-      }
-
-      .social-links {
+      .education-gpa {
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: end;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-1);
+        padding: var(--space-4) var(--space-6);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        background: var(--color-accent-muted);
         text-align: center;
-        margin-top: 40px;
       }
 
-      .social-links a {
-        color: var(--text-color-dark);
-        font-size: 2rem;
-        margin: 0 15px;
-        transition: color 0.3s ease, transform 0.2s ease;
+      .education-gpa-value {
+        font-family: var(--font-mono);
+        font-weight: var(--weight-semibold);
+        font-size: var(--text-2xl);
+        color: var(--color-accent);
+        line-height: 1;
       }
 
-      body.light-theme .social-links a {
-        color: var(--text-color-light);
+      .education-gpa-label {
+        margin-top: var(--space-1);
       }
 
-      .social-links a:hover {
-        color: var(--highlight-color-dark);
+      .education-coursework {
+        grid-column: 1 / -1;
+        margin-top: var(--space-6);
+        padding-top: var(--space-6);
+        border-top: 1px solid var(--color-border);
+      }
+
+      .education-coursework-label {
+        margin: 0 0 var(--space-4) 0;
+      }
+
+      .education-coursework-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-3);
+      }
+
+      .course-tag {
+        display: inline-flex;
+        align-items: center;
+        padding: var(--space-2) var(--space-4);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-full);
+        font-size: var(--text-sm);
+        color: var(--color-text-secondary);
+        background: var(--color-surface-raised);
+        transition: color var(--transition-base) var(--ease-standard),
+          border-color var(--transition-base) var(--ease-standard);
+      }
+
+      .course-tag:hover {
+        color: var(--color-text);
+        border-color: var(--color-border-strong);
+      }
+
+      /* ============================================================
+         CTA / CONTACT — 2026 refresh (premium call-to-action)
+         ============================================================ */
+      .cta-section {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-inner {
+        position: relative;
+        z-index: 1;
+        max-width: 640px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .cta-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        padding: var(--space-2) var(--space-4);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-full);
+        color: var(--color-text-secondary);
+        margin: 0 0 var(--space-6) 0;
+      }
+
+      .cta-heading {
+        font-family: var(--font-sans);
+        font-weight: var(--weight-extrabold);
+        letter-spacing: -0.02em;
+        line-height: var(--leading-tight);
+        font-size: var(--text-3xl);
+        margin: 0 0 var(--space-5) 0;
+      }
+
+      .cta-description {
+        font-size: var(--text-lg);
+        line-height: var(--leading-normal);
+        color: var(--color-text-secondary);
+        margin: 0 0 var(--space-10) 0;
+      }
+
+      .cta-contact-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-4);
+        margin-bottom: var(--space-10);
+      }
+
+      .cta-contact-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: var(--space-3);
+        padding: var(--space-6) var(--space-4);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-lg);
+        background: var(--color-surface);
+        color: var(--color-text-secondary);
+        text-decoration: none;
+        font-size: var(--text-sm);
+        font-weight: var(--weight-medium);
+        transition: border-color var(--transition-base) var(--ease-standard),
+          transform var(--transition-base) var(--ease-standard),
+          color var(--transition-base) var(--ease-standard);
+      }
+
+      .cta-contact-card i {
+        font-size: var(--text-xl);
+        color: var(--color-accent);
+      }
+
+      .cta-contact-card:hover {
+        border-color: var(--color-accent);
+        color: var(--color-text);
         transform: translateY(-3px);
       }
 
-      body.light-theme .social-links a:hover {
-        color: var(--highlight-color-light);
+      .cta-resume-btn {
+        padding: var(--space-4) var(--space-10);
+        font-size: var(--text-base);
       }
 
-      /* Footer */
-      footer {
-        text-align: center;
-        padding: 30px 20px;
-        background-color: var(--header-bg-dark);
-        color: var(--secondary-text-dark);
-        font-size: 0.9rem;
-        margin-top: 60px;
-        transition: background-color 0.3s ease, color 0.3s ease;
+      /* ============================================================
+         FOOTER — 2026 refresh (minimal, premium)
+         ============================================================ */
+      .site-footer {
+        border-top: 1px solid var(--color-border);
+        margin-top: var(--space-16);
+        padding: var(--space-10) var(--space-5);
       }
 
-      body.light-theme footer {
-        background-color: var(--header-bg-light);
-        color: var(--secondary-text-light);
+      .footer-inner {
+        max-width: var(--container-width);
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-6);
       }
 
-      footer p {
+      .footer-brand {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-1);
+      }
+
+      .footer-name {
+        font-family: var(--font-sans);
+        font-weight: var(--weight-semibold);
+        color: var(--color-text);
+        font-size: var(--text-base);
+      }
+
+      .footer-role {
+        color: var(--color-text-tertiary);
+      }
+
+      .footer-socials {
+        display: flex;
+        align-items: center;
+        gap: var(--space-3);
+      }
+
+      .footer-socials a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        border-radius: var(--radius-full);
+        border: 1px solid var(--color-border);
+        color: var(--color-text-secondary);
+        text-decoration: none;
+        transition: color var(--transition-base) var(--ease-standard),
+          border-color var(--transition-base) var(--ease-standard),
+          transform var(--transition-fast) var(--ease-standard);
+      }
+
+      .footer-socials a:hover {
+        color: var(--color-accent);
+        border-color: var(--color-accent);
+        transform: translateY(-2px);
+      }
+
+      .footer-meta {
+        text-align: right;
+      }
+
+      .footer-copyright,
+      .footer-built-with {
         margin: 0;
-        color: inherit; /* Inherit color from footer */
+        font-size: var(--text-sm);
+        color: var(--color-text-tertiary);
+        line-height: var(--leading-snug);
       }
 
       /* Responsive Design */
@@ -1372,6 +1425,36 @@
 
         .skills-categories-grid {
           grid-template-columns: 1fr; /* Stack categories on small screens */
+        }
+
+        .education-card {
+          grid-template-columns: 1fr;
+        }
+
+        .education-gpa {
+          grid-column: 1;
+          grid-row: 2;
+          justify-self: start;
+          flex-direction: row;
+          gap: var(--space-2);
+          margin-top: var(--space-4);
+        }
+
+        .cta-contact-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .cta-heading {
+          font-size: var(--text-2xl);
+        }
+
+        .footer-inner {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .footer-meta {
+          text-align: center;
         }
       }
 

@@ -106,3 +106,11 @@ if (scrollIndicator) {
     }
   });
 }
+
+// ============================================================
+// Footer — dynamic copyright year
+// ============================================================
+const footerYear = document.getElementById("footerYear");
+if (footerYear) {
+  footerYear.textContent = new Date().getFullYear();
+}

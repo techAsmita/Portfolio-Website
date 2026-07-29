@@ -320,62 +320,98 @@
     <!-- Education Section -->
     <section id="education">
       <h2 class="section-heading">EDUCATION</h2>
-      <div class="education-item">
-        <img src="All Images/Thapar Institute of Engineering and Technology logo.jpeg" alt="Thapar Institute Logo" class="education-logo">
-        <div class="education-content">
-          <h3>Thapar Institute of Engineering & Technology</h3>
-          <h4>Bachelor's degree, Computer Engineering | Aug 2023 - May 2027</h4>
-          <p>Relevant Coursework: R (Programming Language) · Oracle Database · Data Structures · Operating Systems · Database Management System (DBMS) · Design analysis and Algorithm · Object-Oriented Programming (OOP) · C++</p>
+      <div class="education-card card">
+        <div class="education-card-header">
+          <p class="education-eyebrow label-mono">2023 – 2027</p>
+          <h3 class="education-institution">Thapar Institute of Engineering &amp; Technology</h3>
+          <p class="education-degree">Bachelor of Engineering, Computer Engineering</p>
         </div>
-      </div>
-      <div class="education-item">
-        <img src="All Images/images.jpeg" alt="Cambridge School Noida Logo" class="education-logo">
-        <div class="education-content">
-          <h3>Cambridge School Noida</h3>
-          <h4>XII | Apr 2022 - Mar 2023</h4>
-          <p>Skills: Teamwork · Communication.</p>
+
+        <div class="education-gpa">
+          <span class="education-gpa-value">8.36</span>
+          <span class="education-gpa-label label-mono">CGPA</span>
         </div>
-      </div>
-      <div class="education-item">
-        <img src="All Images/images.jpeg" alt="Cambridge School Noida Logo" class="education-logo">
-        <div class="education-content">
-          <h3>Cambridge School Noida</h3>
-          <h4>X | Apr 2020 - Mar 2021</h4>
-          <p>Skills: Team Building · Writing.</p>
+
+        <div class="education-coursework">
+          <p class="education-coursework-label label-mono">Relevant Coursework</p>
+          <div class="education-coursework-tags">
+            <span class="course-tag">Data Structures</span>
+            <span class="course-tag">Operating Systems</span>
+            <span class="course-tag">DBMS</span>
+            <span class="course-tag">Computer Networks</span>
+            <span class="course-tag">Machine Learning</span>
+            <span class="course-tag">Artificial Intelligence</span>
+          </div>
         </div>
       </div>
     </section>
     <!-- HR after Education section -->
     <hr class="section-divider">
 
-    <!-- Placeholder for Contact Section -->
-    <section id="contact">
-      <h2 class="section-heading">CONTACT ME</h2>
-      <div class="contact-form-container">
-        <form class="contact-form">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required />
+    <!-- CTA / Contact Section -->
+    <section class="cta-section" id="contact">
+      <div class="cta-inner">
+        <p class="cta-eyebrow label-mono">Get In Touch</p>
+        <h2 class="cta-heading">
+          Let's Build Something <span class="hero-heading-gradient">Meaningful.</span>
+        </h2>
+        <p class="cta-description">
+          I'm open to Software Engineering, AI Engineering, Machine Learning, and
+          Data opportunities — reach out and let's talk.
+        </p>
 
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required />
-
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required></textarea>
-
-          <button type="submit">Send Message</button>
-        </form>
-        <div class="social-links">
-          <!-- Only LinkedIn link remains here -->
-          <a href="https://www.linkedin.com/in/techasmita/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <div class="cta-contact-grid">
+          <a href="mailto:asmitaasmani@gmail.com" class="cta-contact-card">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <span>Email</span>
+          </a>
+          <a href="https://github.com/techAsmita" target="_blank" rel="noopener" class="cta-contact-card">
+            <i class="fab fa-github" aria-hidden="true"></i>
+            <span>GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/techasmita/" target="_blank" rel="noopener" class="cta-contact-card">
+            <i class="fab fa-linkedin" aria-hidden="true"></i>
+            <span>LinkedIn</span>
+          </a>
         </div>
+
+        <a
+          href="https://docs.google.com/document/d/1wMPlIwiGMudeCo35K3_Z9RziOapGN6wR-BIvf9yC3qU/edit?usp=sharing"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-primary cta-resume-btn"
+          >Download Resume</a
+        >
       </div>
     </section>
     <!-- HR after Contact section -->
     <hr class="section-divider">
 
     <!-- Footer -->
-    <footer>
-      <p>&copy; Asmita Roy. All rights reserved.</p>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="footer-name">Asmita Roy</span>
+          <span class="footer-role label-mono">AI Engineer • Full Stack Developer</span>
+        </div>
+
+        <div class="footer-socials" aria-label="Social links">
+          <a href="https://github.com/techAsmita" target="_blank" rel="noopener" aria-label="GitHub">
+            <i class="fab fa-github" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/techasmita/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fab fa-linkedin" aria-hidden="true"></i>
+          </a>
+          <a href="mailto:asmitaasmani@gmail.com" aria-label="Email">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <div class="footer-meta">
+          <p class="footer-copyright">&copy; <span id="footerYear"></span> Asmita Roy. All rights reserved.</p>
+          <p class="footer-built-with">Built with HTML, CSS &amp; JavaScript.</p>
+        </div>
+      </div>
     </footer>
 
     <script src="Javascript-code/Interactive.js"></script>
