@@ -18,73 +18,125 @@
   </head>
   <body>
     <!-- Navbar -->
-    <header>
-      <nav class="modern-header">
-        <div class="header-inner"> <!-- New wrapper for header content -->
-          <div class="logo">
-            <img
-              src="https://img.icons8.com/ios-filled/50/ffffff/circled-c.png"
-              alt="logo"
-            />
-            <span>Portfolio</span>
-          </div>
-          <ul class="nav-links" id="navLinks">
-            <li><a href="#about">ABOUT</a></li>
-            <li><a href="#skills">SKILLS</a></li>
-            <li><a href="#projects">PROJECTS</a></li>
-            <li><a href="#education">EDUCATION</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-          </ul>
-          <div class="nav-right">
-            <a
-              href="https://github.com/techAsmita"
-              target="_blank"
-              class="github-btn"
-              >Github Profile</a
-            >
-            <span class="theme-toggle" id="themeToggle">
-              <i class="fas fa-sun"></i>
-            </span>
-            <div class="hamburger" id="hamburger">
-              <i class="fas fa-bars"></i>
-            </div>
-          </div>
+    <header class="site-header" id="siteHeader">
+      <nav class="navbar-inner" aria-label="Primary">
+        <a href="#about" class="nav-logo" aria-label="Asmita Roy — home">
+          <span class="nav-logo-mark" aria-hidden="true">AR</span>
+          <span class="nav-logo-text">Asmita Roy</span>
+        </a>
+
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#about" class="nav-link active-link" data-nav-link>About</a></li>
+          <li><a href="#projects" class="nav-link" data-nav-link>Projects</a></li>
+          <li><a href="#skills" class="nav-link" data-nav-link>Skills</a></li>
+          <li><a href="#education" class="nav-link" data-nav-link>Experience</a></li>
+          <li><a href="#contact" class="nav-link" data-nav-link>Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button
+            type="button"
+            class="icon-btn"
+            id="themeToggle"
+            aria-label="Toggle light and dark theme"
+            aria-pressed="false"
+          >
+            <i class="fas fa-sun" aria-hidden="true"></i>
+          </button>
+          <a
+            href="https://docs.google.com/document/d/1wMPlIwiGMudeCo35K3_Z9RziOapGN6wR-BIvf9yC3qU/edit?usp=sharing"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-primary btn-sm"
+            >Resume</a
+          >
+          <button
+            type="button"
+            class="nav-toggle"
+            id="navToggle"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="navMenu"
+          >
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+          </button>
         </div>
       </nav>
     </header>
 
     <!-- Hero Section (About Me) -->
     <section class="hero" id="about">
-      <div class="hero-content">
-        <div class="profile-image-container">
-          <img
-            src="All Images/WhatsApp Image 2025-06-30 at 15.30.36.jpeg"
-            alt="Asmita Roy Profile"
-            class="profile-image"
-          />
-        </div>
-        <div class="hero-text-content">
-          <h1>
-            Hi, I am<br />
-            <span class="highlight">Asmita Roy</span>
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-grid"></div>
+        <div class="hero-glow hero-glow-1"></div>
+        <div class="hero-glow hero-glow-2"></div>
+      </div>
+
+      <div class="hero-inner">
+        <div class="hero-text">
+          <p class="hero-eyebrow label-mono">Computer Engineering Student @ TIET</p>
+
+          <h1 class="hero-heading">
+            <span class="hero-heading-line">Asmita Roy</span>
+            <span class="hero-heading-line hero-heading-gradient">AI Engineer</span>
+            <span class="hero-heading-line">&amp;</span>
+            <span class="hero-heading-line hero-heading-gradient">Full Stack Developer</span>
           </h1>
-          <h2>I am a <span id="typed-role"></span></h2>
-          <p>
-            I am a passionate and versatile Computer Engineering student, always
-            eager to take on new challenges. With a love for creative
-            problem-solving and a flair for writing and design, I aim to deliver
-            meaningful solutions and visually impactful content. Whether it’s
-            building intelligent systems or editing highlight reels, I put my best
-            foot forward with curiosity and joy.
+
+          <p class="hero-description">
+            Building intelligent software powered by AI, machine learning, and
+            full-stack engineering to solve real-world problems.
           </p>
-          <a
-            href="https://docs.google.com/document/d/1wMPlIwiGMudeCo35K3_Z9RziOapGN6wR-BIvf9yC3qU/edit?usp=sharing"
-            target="_blank"
-            class="resume-btn"
-            >Check Resume</a
-          >
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary hero-btn">View Projects</a>
+            <a
+              href="https://docs.google.com/document/d/1wMPlIwiGMudeCo35K3_Z9RziOapGN6wR-BIvf9yC3qU/edit?usp=sharing"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-secondary hero-btn"
+              >Download Resume</a
+            >
+            <a
+              href="https://github.com/techAsmita"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-ghost hero-btn"
+              ><i class="fab fa-github" aria-hidden="true"></i> GitHub</a
+            >
+          </div>
+
+          <div class="hero-socials" aria-label="Social links">
+            <a href="https://github.com/techAsmita" target="_blank" rel="noopener" aria-label="GitHub profile">
+              <i class="fab fa-github" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/techasmita/" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+              <i class="fab fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="mailto:asmitaasmani@gmail.com" aria-label="Email Asmita">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-visual-shape hero-visual-shape-1"></div>
+          <div class="hero-visual-shape hero-visual-shape-2"></div>
+          <div class="hero-image-frame">
+            <img
+              src="All Images/WhatsApp Image 2025-06-30 at 15.30.36.jpeg"
+              alt="Portrait of Asmita Roy"
+              class="hero-image"
+            />
+          </div>
         </div>
       </div>
+
+      <button class="hero-scroll-indicator" id="scrollIndicator" type="button" aria-label="Scroll to About section">
+        <span class="hero-scroll-line"></span>
+      </button>
     </section>
     <!-- HR after Hero/About section -->
     <hr class="section-divider">
@@ -326,8 +378,6 @@
       <p>&copy; Asmita Roy. All rights reserved.</p>
     </footer>
 
-    <!-- Typed.js -->
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="Javascript-code/Interactive.js"></script>
   </body>
 </html>
