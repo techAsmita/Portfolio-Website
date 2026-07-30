@@ -126,14 +126,17 @@
       /* Light theme styles */
       body.light-theme {
         background-color: var(--bg-color-light);
+        background-image: radial-gradient(900px circle at 8% -10%, rgba(90, 79, 217, 0.06), transparent 55%),
+          radial-gradient(700px circle at 100% 15%, rgba(90, 79, 217, 0.045), transparent 50%);
+        background-attachment: fixed;
         color: var(--text-color-light);
 
         /* New design-system tokens (light) */
-        --color-bg: #fafafa;
-        --color-surface: #ffffff;
-        --color-surface-raised: #f4f4f5;
-        --color-border: #e5e5e7;
-        --color-border-strong: #d4d4d8;
+        --color-bg: #faf9fd;
+        --color-surface: #fdfcff;
+        --color-surface-raised: #f6f5fb;
+        --color-border: #e8e6f0;
+        --color-border-strong: #d7d4e4;
         --color-text: #18181b;
         --color-text-secondary: #6b6b72;
         --color-text-tertiary: #8b8b92;
@@ -262,8 +265,16 @@
 
       .card:hover {
         border-color: var(--color-border-strong);
-        transform: translateY(-2px);
+        transform: translateY(-2px) scale(1.01);
         box-shadow: var(--shadow-md);
+      }
+
+      body.light-theme .card,
+      body.light-theme .project-card:not(.project-card-featured),
+      body.light-theme .skill-category,
+      body.light-theme .cta-contact-card,
+      body.light-theme .education-card {
+        background: linear-gradient(160deg, #ffffff 0%, var(--color-surface) 100%);
       }
 
       /* ---- Mono label utility (for future tags/eyebrows/code) ---- */
@@ -303,7 +314,10 @@
       }
 
       body.light-theme section:not(#about) {
-        background-color: var(--section-bg-light);
+        background-color: #fbfaff;
+        background-image: radial-gradient(500px circle at 12% 0%, rgba(90, 79, 217, 0.05), transparent 60%),
+          radial-gradient(420px circle at 100% 100%, rgba(90, 79, 217, 0.04), transparent 55%),
+          linear-gradient(180deg, #fdfcff 0%, #f6f5fb 100%);
       }
 
       h1,
@@ -555,7 +569,7 @@
         min-height: 92vh;
         display: flex;
         align-items: center;
-        padding: calc(var(--space-24) + var(--space-6)) var(--space-5) var(--space-16);
+        padding: calc(var(--space-24) + var(--space-6)) var(--space-5) var(--space-20);
       }
 
       /* ---- Background: grid + soft gradient glows (CSS-only) ---- */
@@ -913,12 +927,14 @@
         font-size: var(--text-xs);
         font-weight: var(--weight-medium);
         transition: color var(--transition-base) var(--ease-standard),
-          border-color var(--transition-base) var(--ease-standard);
+          border-color var(--transition-base) var(--ease-standard),
+          transform var(--transition-fast) var(--ease-standard);
       }
 
       .skill-badge:hover {
         color: var(--color-text);
         border-color: var(--color-accent);
+        transform: translateY(-1px);
       }
 
       .skill-badge i {
@@ -952,7 +968,7 @@
 
       .project-card:hover {
         border-color: var(--color-border-strong);
-        transform: translateY(-4px);
+        transform: translateY(-4px) scale(1.008);
         box-shadow: var(--shadow-md);
       }
 
@@ -961,6 +977,7 @@
         flex-direction: column;
         grid-column: span 2;
         grid-row: span 2;
+        max-width: 94%;
         padding: var(--space-8);
         background: linear-gradient(160deg, var(--color-surface) 60%, var(--color-accent-muted));
       }
@@ -981,42 +998,25 @@
         box-shadow: var(--shadow-sm);
       }
 
-      .browser-placeholder {
+      .project-status-placeholder {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: var(--space-3);
         aspect-ratio: 16 / 9;
-        border: 1px solid var(--color-border-strong);
+        border: 1px dashed var(--color-border-strong);
         border-radius: var(--radius-md);
-        overflow: hidden;
         background: var(--color-surface-raised);
       }
 
-      .browser-mockup-bar {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        padding: var(--space-2) var(--space-4);
-        background: var(--color-bg);
-        border-bottom: 1px solid var(--color-border);
-      }
-
-      .browser-dot {
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: var(--color-border-strong);
-      }
-
-      .browser-url {
-        margin-left: var(--space-3);
-        font-family: var(--font-mono);
-        font-size: var(--text-xs);
+      .project-status-placeholder i {
+        font-size: var(--text-xl);
         color: var(--color-text-tertiary);
       }
 
-      .browser-placeholder-body {
-        flex: 1;
-        background: linear-gradient(135deg, var(--color-accent-muted), transparent);
+      .project-status-label {
+        color: var(--color-text-tertiary);
       }
 
       .project-card-glyph {
@@ -1213,12 +1213,14 @@
         color: var(--color-text-secondary);
         background: var(--color-surface-raised);
         transition: color var(--transition-base) var(--ease-standard),
-          border-color var(--transition-base) var(--ease-standard);
+          border-color var(--transition-base) var(--ease-standard),
+          transform var(--transition-fast) var(--ease-standard);
       }
 
       .course-tag:hover {
         color: var(--color-text);
         border-color: var(--color-border-strong);
+        transform: translateY(-1px);
       }
 
       /* ============================================================
