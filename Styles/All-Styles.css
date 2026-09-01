@@ -887,9 +887,15 @@ body.light-theme .icon-btn:hover {
   border-radius: var(--radius-full);
   background: transparent;
   cursor: pointer;
-  display: flex;
+  display: none; /* hidden by default on all screens */
   justify-content: center;
   padding-top: 8px;
+}
+
+@media (min-width: 1025px) {
+  .hero-scroll-indicator {
+    display: flex; /* only show on real desktop-width screens */
+  }
 }
 
 .hero-scroll-line {
@@ -1523,10 +1529,7 @@ body.light-theme .cta-contact-card:hover {
     text-align: center;
   }
 
-  /* ===== Mobile overlapping fix ===== */
-  .hero-scroll-indicator {
-    display: none !important;
-  }
+  
 
   .hero-socials {
     margin-top: 1.5rem;
@@ -1539,6 +1542,11 @@ body.light-theme .cta-contact-card:hover {
     width: 44px;
     height: 44px;
   }
+}
+
+.hero-socials {
+  position: relative;
+  z-index: 3;
 }
 
 @media (max-width: 480px) {
