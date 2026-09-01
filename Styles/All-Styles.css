@@ -1469,7 +1469,7 @@ body.light-theme .cta-contact-card:hover {
 
   .hero {
     min-height: auto;
-    padding: calc(var(--space-20) + var(--space-4)) var(--space-5) var(--space-12);
+    padding: calc(var(--space-20) + var(--space-4)) var(--space-5) 4rem;
   }
 
   .hero-heading {
@@ -1522,6 +1522,23 @@ body.light-theme .cta-contact-card:hover {
   .footer-meta {
     text-align: center;
   }
+
+  /* ===== Mobile overlapping fix ===== */
+  .hero-scroll-indicator {
+    display: none !important;
+  }
+
+  .hero-socials {
+    margin-top: 1.5rem;
+    gap: 1rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-socials a {
+    width: 44px;
+    height: 44px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1540,10 +1557,19 @@ body.light-theme .cta-contact-card:hover {
   .hero-cta-group {
     flex-direction: column;
     align-items: stretch;
+    gap: 0.75rem;
   }
 
   .hero-btn {
     width: 100%;
+  }
+
+  .hero-description {
+    margin-bottom: 1.75rem;
+  }
+
+  .hero-socials {
+    margin-bottom: 1rem;
   }
 
   .skill-category {
