@@ -1047,6 +1047,24 @@ body.light-theme .project-card-featured {
   box-shadow: var(--shadow-sm);
 }
 
+.project-preview-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16 / 9;
+  border: 1px dashed var(--color-border-strong);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-raised);
+  color: var(--color-text-tertiary);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+}
+
+.project-preview-fallback::after {
+  content: "Screenshot coming soon";
+}
+
 .project-featured-badge {
   margin: 0 0 var(--space-3) 0;
 }
